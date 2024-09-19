@@ -11,7 +11,7 @@ Este projeto tem como objetivo desenvolver um modelo de banco de dados para um s
 
 O Diagrama Entidade-Relacionamento (ER) é uma representação gráfica dos dados do nosso sistema, mostrando as entidades, seus atributos e os relacionamentos entre elas. Esse diagrama é crucial para o entendimento e implementação do banco de dados.
 
-[Modelo Entidade Relacionamento]()
+![Modelo Entidade Relacionamento](Modelo_Entidade-Relacionamento_TF.png)
 
 ## 👥 Participantes da Equipe
 
