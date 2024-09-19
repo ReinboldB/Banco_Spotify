@@ -3,25 +3,9 @@ from GeneroDAO import GeneroDAO
 
 
 # Classe que implementa a interface grÃ¡fica da aplicaÃ§Ã£o
-class InterfaceGrafica(object):
+class InterfaceGenero(object):
 
-    # MÃ©todo que imprime a tela inicial da aplicaÃ§Ã£o
-    def menu_principal(self):
-        print("========================")
-        print("Cadastro de Gênero Musical    ")
-        print("========================")
-        print("1 - Cadastrar Gênero musical ")
-        print("0 - Sair")
-        print("========================")
-        opcao = int(input("Digite uma opção [0-1]: "))
-        if opcao == 1:
-            self.menu_cadastro_genero()
-            return
-        if opcao == 0:
-            return
-        self.menu_principal()
-
-    # MÃ©todo que imprime a tela inicial do cadastro de pessoas
+    # Método que imprime a tela inicial do cadastro de pessoas
     def menu_cadastro_genero(self):
         print("============================")
         print("Cadastro de Generos Musicais         ")
@@ -36,23 +20,21 @@ class InterfaceGrafica(object):
         opcao = int(input("Digite uma opção [0-5]: "))
         if opcao == 1:
             self.menu_listar_todos_genero()
-            return
+            
         if opcao == 2:
             self.menu_listar_um_genero()
-            return
+            
         if opcao == 3:
             self.menu_inserir_um_genero()
-            return
+            
         if opcao == 4:
             self.menu_atualizar_um_genero()
-            return
+            
         if opcao == 5:
             self.menu_remover_um_genero()
-            return
+            
         if opcao == 0:
-            self.menu_principal()
             return
-        self.menu_cadastro_genero()
 
     # MÃ©todo que Ã© chamado para listar as pessoas existentes
     def menu_listar_todos_genero(self):
@@ -71,7 +53,7 @@ class InterfaceGrafica(object):
     def menu_listar_um_genero(self):
         dao = GeneroDAO()
         id = int(input("Digite o id do gênero: "))
-        g = dao.listar(codigo)
+        g = dao.listar(id)
         if g is None:
             print("Nenhum registro encontrado")
         else:
@@ -138,4 +120,4 @@ class InterfaceGrafica(object):
 # Inicializa a aplicaÃ§Ã£o
 if __name__ == '__main__':
     gui = InterfaceGrafica()
-    gui.menu_principal()
+    gui.menu_principal_geral()
